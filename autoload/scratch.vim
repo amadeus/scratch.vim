@@ -7,7 +7,7 @@ function! s:activate_autocmds(bufnr)
     augroup ScratchAutoHide
       autocmd!
       execute 'autocmd WinEnter <buffer=' . a:bufnr . '> nested silent call <SID>close_window(0)'
-      execute 'autocmd Winleave <buffer=' . a:bufnr . '> nested silent call <SID>close_window(1)'
+      execute 'autocmd WinLeave <buffer=' . a:bufnr . '> nested silent call <SID>close_window(1)'
     augroup END
   endif
 endfunction
